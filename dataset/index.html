@@ -1,10 +1,366 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>HTML Meta Tag</title>
-      <meta http-equiv = "refresh" content = "0;url=https://ucsd-openrooms.github.io/dataset" />
-   </head>
-   <body>
-      <p></p>
-   </body>
-</html>
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>OpenRooms</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="./index_files/icon.png">
+    <link rel="stylesheet" href="./index_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./index_files/font-awesome.min.css">
+    <link rel="stylesheet" href="./index_files/codemirror.min.css">
+    <link rel="stylesheet" href="./index_files/app.css">
+    <link rel="stylesheet" href="./index_files/bootstrap.min(1).css"> 
+
+    <script type="text/javascript" async="" src="./index_files/analytics.js"></script>
+    <script type="text/javascript" async="" src="./index_files/analytics(1).js"></script>
+    <script async="" src="./index_files/js"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-110862391-3');
+    </script>
+
+    <script src="./index_files/jquery.min.js"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./index_files/codemirror.min.js"></script>
+    <script src="./index_files/clipboard.min.js"></script>
+    <script src="./index_files/app.js"></script> 
+    <link rel="stylesheet" href="./index_files/default.min.css">
+    <script src="./index_files/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</head>
+
+<body data-gr-c-s-loaded="true">
+    <div class="container" id="main">
+        <div class="row">
+            <h1 class="col-md-12 text-center">
+                OpenRooms: An Open Framework <br>for Photorealistic Indoor Scene Datasets
+            <br /><br />
+            <small>
+                CVPR 2021 (<b>Oral presentation</b>)
+            </small>
+            <br /><br />
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://sites.google.com/a/eng.ucsd.edu/zhengqinli">
+                          Zhengqin Li
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        Ting-Wei Yu<sup>1</sup>
+                    </li>
+                    <li>
+                        Shen Sang<sup>1</sup>
+                    </li>
+                    <li>
+                        Sarah Wang<sup>1</sup>
+                    </li>
+                     <li>
+                        <a href="http://cseweb.ucsd.edu/~bisai/">
+                          Meng Song
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        Yuhan Liu<sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://yuyingyeh.github.io/">
+                          Yu-Ying Yeh
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://jerrypiglet.github.io/">
+                          Rui Zhu
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=v19p_0oAAAAJ&hl=en">
+                          Nitesh Gundavarapu
+                        </a><sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        Jia Shi<sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="http://cseweb.ucsd.edu/~bisai/">
+                          Sai Bi
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://cseweb.ucsd.edu/~zex014/">
+                          Zexiang Xu
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="https://kovenyu.com/">
+                            Hong-Xing Yu
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="http://www.kalyans.org/">
+                            Kalyan Sunkavalli
+                        </a><sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="http://www.miloshasan.net/">
+                            Miloš Hašan
+                        </a><sup>2</sup>
+                    </li>
+                    <li>
+                        <a href="http://cseweb.ucsd.edu/~ravir/">
+                            Ravi Ramamoorthi
+                        </a><sup>1</sup>
+                    </li>
+                    <li>
+                        <a href="http://cseweb.ucsd.edu/~mkchandraker/">
+                            Manmohan Chandraker
+                        </a><sup>1</sup>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <sup>1</sup>UC San Diego
+                    </li>
+                    <li>
+                        <sup>2</sup>Adobe
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Dataset Overview
+                </h3>
+                <div class="text-center">
+                    <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                        <source src="http://cseweb.ucsd.edu/~viscomp/projects/CVPR21OpenRooms/ground-truth.mp4" type="video/mp4">
+                    </video>
+                </div> 
+                <br /><br />
+                <p class="text-justify">
+                This is the webpage for downloading the <a href="https://ucsd-openrooms.github.io/">OpenRooms</a> dataset. 
+                We will first introduce the rendered images and various ground-truths. Later, we will introduce how to render your own images 
+                based on the OpenRooms dataset creation pipeline. For each type of data, we offer two kinds of formats, zip files and individual folders, 
+                so that users can choose whether to download the whole dataset more efficiently or download individual folders for different scenes. 
+                To download the file, we recommend the tool <a href="https://rclone.org/">Rclone</a>, otherwise users may suffer from slow downloading speed and instability. 
+                If you have any questions, please email to <a href="">openroomsdataset@gmail.com</a>.
+                </p> 
+                <p class="text-justify"> 
+                We render six versions of images for all the scenes. Those rendered results are saved in 6 folders: <b>main_xml</b>, <b>main_xml1</b>, <b>mainDiffMat_xml</b>, 
+                <b>mainDiffMat_xml1</b>, <b>mainDiffLight_xml</b> and <b>mainDiffLight_xml1</b>. All 6 versions are built with the same CAD models. <b>main_xml</b>, <b>mainDiffMat_xml</b>, 
+                <b>mainDiffLight_xml</b> share one set of camera views while <b>main_xml1</b>, <b>mainDiffMat_xml1</b> and <b>mainDiffLight_xml1</b> share the other set of camera views.
+                <b>main_xml(1)</b> and <b>mainDiffMat_xml(1)</b> have the same lighting but different materials while <b>main_xml(1)</b> and <b>mainDiffLight_xml(1)</b> have the same 
+                materials but different lighting. Both the lighting and material configuration of <b>main_xml</b> and <b>main_xml1</b> are different. We believe this configuration can 
+                potentially help us develope novel applications for image editing. An example scene from <b>main_xml</b>, <b>mainDiffMat_xml</b> and <b>mainDiffLight_xml</b> is shown 
+                in the video sequence below. 
+                </p>
+                <div class="text-center">
+                    <video id="v0" width="100%" autoplay="" loop="" muted="" controls="">
+                        <source src="http://cseweb.ucsd.edu/~viscomp/projects/CVPR21OpenRooms/DifferentVersions.mp4" type="video/mp4">
+                    </video>
+                </div> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Rendered Images and Ground-truths
+                </h3> 
+                <p class="text-justify">
+                All rendered images and the corresponding ground-truths are saved in folder <a href="">data/rendering/data/</a>. In the following, we will detail each type of rendered data and 
+                how to read and interpret them. Two example scenes with images and all ground-truths are included in <b><a href="">Demo</a></b> and <b><a href="">Demo.zip</a></b>.
+                </p>
+                <p class="text-justify"> 
+                <b><a href="https://drive.google.com/drive/folders/1-DhVDNjPc1l8Vu9Qt_yMbHnpC9OEUa-q?usp=sharing">Images</a> and <a href="https://drive.google.com/file/d/11046xQ9L6SkahoxF0W3cn__pmFZQYKyv/view?usp=sharing">Images.zip</a>: </b> 
+                The 480 &times 640 HDR images (im_*.hdr), which can be read with the python command. 
+                <pre><code class="python">im = cv2.imread('im_1.hdr', -1)[:, :, ::-1]</code></pre>
+                We render images for <b>main_xml(1)</b>, <b>mainDiffMat_xml(1)</b> and <b>mainDiffLight_xml(1)</b>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">Material</a> and <a href="">Material.zip</a>: </b> The 480 &times 640 diffuse albedo maps (imbaseColor_*.png) and roughness map (imroughness_*.png). Note that 
+                the diffuse albedo map is saved in sRGB space. To load it into linear RGB space, we can use the following python commands. The roughness map is saved in linear space and can 
+                be read directly.
+                <pre><code class="python">im = cv2.imread('imbaseColor_1.hdr')[:, :, ::-1]
+im = (im.astype(np.float32 ) / 255.0) ** (2.2)</code></pre> 
+                We only render the diffuse albedo maps and roughness maps for <b>main_xml(1)</b> and <b>mainDiffMat_xml(1)</b> because <b>mainDiffLight_xml(1)</b> share the same material maps 
+                with the <b>main_xml(1)</b>. 
+                </p>
+                <p class="text-justify">  
+                <b><a href="">Geometry</a> and <a href="">Geometry.zip</a>: </b>The 480 &times 640 normal maps (imnomral_*.png) and depth maps (imdepth_*.dat). The R, G, B channel of the normal 
+                map corresponds to right, up, backward direction of the image plane. To load the depth map, we can use the following python commands.  
+                <pre><code class="python">with open('imdepth_1.dat', 'rb') as fIn:
+    # Read the height and width of depth
+    hBuffer = fIn.read(4)
+    height = struct.unpack('i', hBuffer)[0]
+    wBuffer = fIn.read(4)
+    width = struct.unpack('i', wBuffer)[0]
+    # Read depth 
+    dBuffer = fIn.read(4 * width * height )
+    depth = np.array(
+        struct.unpack('f' * height * width, dBuffer ), 
+        dtype=np.float32 )
+    depth = depth.reshape(height, width)</code></pre>   
+                We render normal maps for <b>main_xml(1)</b> and <b>mainDiffMat_xml(1)</b>, and depth maps for <b>main_xml(1)</b>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">Mask</a> and <a href="">Mask.zip</a>: </b>The 480 &times 460 grey scale mask (immask_*.png) for light sources. The pixel value 0 represents the region of environment maps. 
+                The pixel value 0.5 represents the region of lamps. Otherwise, the pixel value will be 1. We render the ground-truth masks for <b>main_xml(1)</b> and <b>mainDiffLight_xml(1)</b>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">SVLighting</a>: </b>The (120 &times 16) &times (160 &times 32) per-pixel environment maps (imenv_*.hdr). The spatial resolution is 120 &times 160 while the environment map resolution is 
+                16 & times 32. To read the per-pixel environment maps, we can use the following python commands.  
+                <pre><code class="python"># Read the envmap of resolution 1920 x 5120 x 3 in RGB format 
+env = cv2.imread('imenv_1', -1)[:, :, ::-1]
+# Reshape and permute the per-pixel environment maps
+env = env.reshape(120, 16, 160, 32, 3)
+env = env.transpose(0, 2, 1, 3, 4)</code></pre> 
+                We render per-pixel environment maps for <b>main_xml(1)</b>, <b>mainDiffMat_xml(1)</b> and <b>mainDiffLight_xml(1)</b>. Since the total size of per-pixel environment maps is 4.0 TB, we do not 
+                provide an extra .zip format for downloading. Please consider using the tool <a href="https://rclone.org/">Rclone</a> if you hope to download all the per-pixel environment maps. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">SVSG</a> and <a href="">SVSG.zip</a>: </b> The ground-truth spatially-varying spherical Gaussian (SG) parameters (imsgEnv_*.h5), computed from this optimization
+                <a href="https://github.com/lzqsd/SphericalGaussianOptimization">code</a>. We generate the ground-truth SG parameters for <b>main_xml(1)</b>, <b>mainDiffMat_xml(1)</b> 
+                and <b>mainDiffLight_xml(1)</b>. For the detailed format, please refer to the optimization <a href="https://github.com/lzqsd/SphericalGaussianOptimization">code</a>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">Shading</a> and <a href="">Shading.zip</a>: </b>The 120 &times 160 diffuse shading (imshading_*.hdr) computed by intergrating the per-pixel environment maps. 
+                We render shading for <b>main_xml(1)</b>, <b>mainDiffMat_xml(1)</b> and <b>mainDiffLight_xml(1)</b>.
+                </p> 
+                <p class="text-justify"> 
+                <b><a href="">SVLightingDirect</a> and <a href="">SVLightingDirect.zip</a>: </b> The (30 &times 16) &times (40 &times 32) per-pixel environment maps with direct illumination (imenvDirect_*.hdr) only. 
+                The spatial resolution is 30 &times 40 while the environment maps resolution is 16 &times 32. The direct per-pixel environment maps can be load the same way as the per-pixel environment maps. 
+                We only render direct per-pixel environment maps for <b>main_xml(1)</b> and <b>mainDiffLight_xml(1)</b> because the direct illumination of <b>mainDiffMat_xml(1)</b> is the same as <b>main_xml(1)</b>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">ShadingDirect</a> and <a href="">ShadingDirect.zip</a>: </b> The 120 &times 160 direct shading (imshadingDirect_*.rgbe). To load the direct shading, we can 
+                use the following python command. 
+                <pre><code class="python">im = cv2.imread('imshadingDirect_1.rgbe', -1)[:, :, ::-1]</code></pre>  
+                </p> 
+                <p class="text-justify"> 
+                <b><a href="">SemanticLabel</a> and <a href="">SemanticLabel.zip</a>: </b>The 480 &times 640 semantic segmentation label (imsemLabel_*.npy). We provide semantic labels for 45 classes of commonly 
+                seen objects and layout for indoor scenes. The 45 classes can be found in <a href="">semanticLabels.txt</a>. We only render the semantic labels for <b>main_xml(1)</b>. 
+                </p>
+                <p class="text-justify"> 
+                <b><a href="">LightSource</a> and <a href="">LightSource.zip</a>: </b> The light source information, including geometry, shadow and direct shading of each light source. 
+                In each scene directory, light_x directory corresponds to im_x.hdr. In each light_x directory, you will see files with numbers in their names. The numbers correspond to 
+                the light source ID, i.e. if the IDs are from 0 to 4, then there are 5 light sources in this scene. 
+                <ul> 
+                    <li>
+                        <b>Geometry: </b>We provide geometry annotation for windows and lamps (box_*.dat). To read the annotation, we can use the following python commmands. 
+                        <pre><code class="python">with open('box_0.dat', 'rb')  as fIn:
+    info = pickle.load(fIn )</code></pre>
+                        There are 3 items saved in the dictionary, which we list blow. 
+                        <ul>
+                            <li>
+                                <b>isWindow: </b>True if the light source is a window, false if the light source is a lamp. 
+                            </li> 
+                            <li>
+                                <b>box3D: </b>The 3D bounding box of the light source, including center (<b>center</b>), orientation (<b>xAxis</b>, <b>yAxis</b>, <b>zAxis</b>) and size 
+                                (<b>xLen</b>, <b>yLen</b>, <b>zLen</b>). 
+                            </li>
+                            <li>
+                                <b>box2D: </b>The 2D bounding box of the light source on the image plane (<b>x1</b>, <b>y1</b>, <b>x2</b>, <b>y2</b>). 
+                            </li>
+                        </ul>
+                        We only provide the light source geometry annotation for <b>main_xml(1)</b>
+                    </li>
+                    <li>
+                        <b>Mask: </b>The 120 &times 160 2D binary masks for light sources (mask*.png). We only provide the masks for <b>main_xml(1)</b>. 
+                    </li>
+                    <li>
+                        <b>Direct shading: </b> The 120 &times 160 direct shading for each light source (imDS*.rgbe). We provide the direction shading for <b>main_xml(1)</b> and <b>mainDiffLight_xml(1)</b>. 
+                    </li>
+                    <li>
+                        <b>Direct shading without occlusion: </b> The 120 &times 160 direct shading with outocclusion for each light source (imNoOcclu*.rgbe). We provide the direction shading for 
+                        <b>main_xml(1)</b> and <b>mainDiffLight_xml(1)</b>.
+                    </li>
+                    <li>
+                        <b>Shadow: </b>The 120 &times 160 shadow maps for each light source (imShadow*.png). We render the shadow map for <b>main_xml(1)</b> only. 
+                    </li>
+                </ul>
+                </p>
+            </div>
+        </div>  
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Dataset Creation
+                </h3>
+                <p class="text-justify"> 
+                <b><a href="https://github.com/lzqsd/OptixRenderer">GPU renderer</a>: </b>Our Optix-based GPU path tracer is available for downloading. 
+                </p> 
+                <p class="text-justify">
+                The CAD models, environment maps, materials and code required to recreate the dataset will be released soon. 
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Related Datasets
+                </h3>
+                <p class="text-justify">
+                The OpenRooms dataset is built on the datasets listed below. We thank their creators for the excellent contribution. Please refer to prior datasets for license issues and terms of use if you hope to use them to create your own dataset. 
+                    <ul>
+                        <li>
+                            <b><a href="http://www.scan-net.org/">ScanNet</a></b> dataset: The real 3D scans of indoor scenes. 
+                        </li>
+                        <li>
+                            <b><a href="https://github.com/skanti/Scan2CAD">Scan2cad</a></b> dataset: The alignment of CAD models to the scanned point clouds. 
+                        </li>
+                        <li>
+                            <b><a href="http://outdoor.hdrdb.com/">Laval outdoor lighting</a></b> dataset: HDR outdoor environment maps
+                        </li>
+                        <li>
+                            <b><a href="https://hdrihaven.com/">HDRI Haven</a></b> lighting dataset: HDR outdoor environment maps 
+                        </li>
+                        <li>
+                            <b><a href="https://partnet.cs.stanford.edu/">PartNet</a></b> dataset: CAD models
+                        </li>
+                    </ul>
+
+                </p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgments
+                </h3>
+                <p class="text-justify">
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+</body></html>
